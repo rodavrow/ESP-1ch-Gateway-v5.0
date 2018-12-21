@@ -198,18 +198,18 @@ struct pins {
 // RST  == GPIO14/ PIN14
 struct pins {
 	uint8_t dio0=26;		// GPIO26 / Dio0 used for one frequency and one SF
-	uint8_t dio1=33;		// GPIO26 / Used for CAD, may or not be shared with DIO0
-	uint8_t dio2=32;		// GPIO26 / Used for frequency hopping, don't care
+	uint8_t dio1=34;		// GPIO26 / Used for CAD, may or not be shared with DIO0
+	uint8_t dio2=35;		// GPIO26 / Used for frequency hopping, don't care
 	uint8_t ss=18;			// GPIO18 / Dx. Select pin connected to GPIO18
-	uint8_t rst=14;			// GPIO0  / D3. Reset pin not used	
+	uint8_t rst=23;			// GPIO0  / D3. Reset pin not used	
 } pins;
 #define SCK 5
 #define MISO 19
 #define MOSI 27
-#define RST 14
+#define RST 23
 #define SS 18
-#define GPS_RX 15
-#define GPS_TX 12
+// #define GPS_RX 15
+// #define GPS_TX 12
 
 #elif _PIN_OUT==5
 // ----------------------------------------------------------------------------
@@ -508,4 +508,3 @@ struct LoraUp {
 #define MGT_RESET					0x15		// Not a LoRa Gateway Spec message
 #define MGT_SET_SF					0x16
 #define MGT_SET_FREQ				0x17
-
